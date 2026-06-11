@@ -1,1 +1,320 @@
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5faff;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0066cc,#00a2ff);
+    color:white;
+    min-height:100vh;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#d6f0ff;
+}
+
+.hero{
+    text-align:center;
+    margin-top:120px;
+    padding:20px;
+}
+
+.hero h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+button{
+    background:white;
+    color:#0066cc;
+    border:none;
+    padding:14px 28px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#dff4ff;
+}
+
+section{
+    padding:80px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#0066cc;
+}
+
+#sobre p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#0077dd;
+    margin-bottom:15px;
+}
+
+.beneficios-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.beneficio{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.beneficio span{
+    font-size:2rem;
+}
+
+.btn-info{
+    display:block;
+    margin:20px auto;
+    background:#0077dd;
+    color:white;
+}
+
+#mensagem{
+    text-align:center;
+    font-size:1.1rem;
+    color:#0066cc;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+textarea{
+    height:120px;
+}
+
+form button{
+    background:#0077dd;
+    color:white;
+}
+
+footer{
+    background:#004c99;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h2{
+        font-size:2rem;
+    }
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>🌱 Agro Sustentável</h1>
+
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#praticas">Práticas</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <h2>Produzir mais, preservando o futuro</h2>
+            <p>
+                A agricultura sustentável busca equilibrar produtividade,
+                preservação ambiental e desenvolvimento econômico.
+            </p>
+
+            <button id="saibaMais">Saiba Mais</button>
+        </div>
+    </header>
+
+    <section id="sobre">
+        <h2>O que é Agro Sustentável?</h2>
+
+        <p>
+            O agro sustentável reúne técnicas agrícolas que reduzem impactos
+            ambientais, conservam recursos naturais e garantem a produção de
+            alimentos para as futuras gerações.
+        </p>
+    </section>
+
+    <section id="praticas">
+        <h2>Práticas Sustentáveis</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>💧 Uso Inteligente da Água</h3>
+                <p>
+                    Sistemas de irrigação eficientes reduzem desperdícios e
+                    aumentam a produtividade.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🌾 Rotação de Culturas</h3>
+                <p>
+                    Melhora a fertilidade do solo e reduz a incidência de pragas.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>♻️ Manejo Sustentável</h3>
+                <p>
+                    Diminui o uso excessivo de defensivos e preserva a biodiversidade.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios">
+        <h2>Benefícios</h2>
+
+        <div class="beneficios-container">
+            <div class="beneficio">
+                <span>🌍</span>
+                <p>Preservação ambiental</p>
+            </div>
+
+            <div class="beneficio">
+                <span>📈</span>
+                <p>Maior eficiência produtiva</p>
+            </div>
+
+            <div class="beneficio">
+                <span>🌱</span>
+                <p>Conservação do solo</p>
+            </div>
+
+            <div class="beneficio">
+                <span>💙</span>
+                <p>Uso responsável dos recursos naturais</p>
+            </div>
+        </div>
+
+        <button class="btn-info">
+            Ver Impacto Positivo
+        </button>
+
+        <p id="mensagem"></p>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+
+        <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea placeholder="Digite sua mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Agro Sustentável | Agricultura para um futuro melhor.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
